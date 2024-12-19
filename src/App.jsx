@@ -4,8 +4,10 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
-import Program from './pages/Program'
+import Research from './pages/Research'
 import GetInvolved from './pages/GetInvolved'
+import News from './pages/News'
+import NewsDetail from './pages/NewsDetail'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 function App() {
@@ -18,8 +20,10 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/program" element={<Program />} />
+              <Route path="/research" element={<Research />} />
               <Route path="/get-involved" element={<GetInvolved />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/news/:slug" element={<NewsDetail />} />
             </Routes>
           </main>
           <Footer />

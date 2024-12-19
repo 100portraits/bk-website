@@ -33,11 +33,11 @@ function Navbar() {
           <Link to="/about-us" className="text-lg hover:opacity-80 transition-opacity duration-300">
             About Us
           </Link>
-          <Link to="/program" className="text-lg hover:opacity-80 transition-opacity duration-300">
-            Program
-          </Link>
           <Link to="/get-involved" className="text-lg hover:opacity-80 transition-opacity duration-300">
             Get Involved
+          </Link>
+          <Link to="/research" className="text-lg hover:opacity-80 transition-opacity duration-300">
+            Research
           </Link>
           <Link to="/news" className="text-lg hover:opacity-80 transition-opacity duration-300">
             News & Media
