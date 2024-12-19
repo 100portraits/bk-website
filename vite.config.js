@@ -6,7 +6,7 @@ export default defineConfig({
   assetsInclude: ['**/*.JPG'],
   build: {
     rollupOptions: {
-      external: ['react-scroll-parallax']
+      external: ['react-scroll-parallax', '@portabletext/react']
     }
   },
   plugins: [react()],
