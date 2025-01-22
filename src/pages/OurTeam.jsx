@@ -4,7 +4,7 @@ function OurTeam() {
   const teamMembers = [
     {
       name: 'Romee Nicolai',
-      role: 'Founder & Director',
+      role: 'Project Leader',
       image: 'https://placehold.co/400x400', // Replace with actual image
       bio: 'Former student who turned her passion for mobility and bike building into reality by founding the Bike Kitchen.',
       contact: {
