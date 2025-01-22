@@ -21,8 +21,8 @@ function Research() {
               conducting research with the Bike Kitchen, please reach out to discuss how 
               your project aligns with our research pillars.
             </p>
-            <a href="mailto:[research_email]" className="bg-primary text-white px-6 py-3 rounded-lg inline-block hover:bg-opacity-90 transition-colors">
-              Contact Research Team
+            <a href="mailto:bikekitchenuva@gmail.com" className="bg-primary text-white px-6 py-3 rounded-lg inline-block hover:bg-opacity-90 transition-colors">
+              Contact Us about Research
             </a>
           </div>
         </details>

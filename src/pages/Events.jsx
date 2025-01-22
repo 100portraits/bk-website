@@ -12,9 +12,10 @@ function Events() {
         </p>
       </div>
 
-      <div className="aspect-[3/2] w-full">
+      <div className="aspect-[3/2] w-full relative">
+        
         <iframe
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FAmsterdam&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0&src=[YOUR_CALENDAR_ID]"
+          src="https://calendar.google.com/calendar/embed?src=0cd0e559b49cb4be8535728c67f7157641409f33d2972ac6665980d9fa1a797a%40group.calendar.google.com&ctz=Europe%2FAmsterdam"
           style={{ border: 0 }}
           width="100%"
           height="100%"

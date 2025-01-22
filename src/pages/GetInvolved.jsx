@@ -1,5 +1,6 @@
 import React from 'react'
 import joinPoster from '../assets/join_poster.jpg'
+import joinCommunity from '../assets/joinCommunity.jpg'
 
 function GetInvolved() {
   return (
@@ -48,9 +49,11 @@ function GetInvolved() {
         </div>
         
         <div className="md:w-2/5 h-min">
-          <div className="w-full h-[400px] bg-gray-200 rounded-lg sticky top-24 flex items-center justify-center">
-            <p className="text-gray-500">Community onepager here</p>
-          </div>
+          <img 
+            src={joinCommunity}
+            alt="Join our community"
+            className="w-full h-full object-cover rounded-lg sticky top-24"
+          />
         </div>
       </div>
 

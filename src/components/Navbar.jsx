@@ -25,10 +25,18 @@ function Navbar() {
 
   const menuItems = [
     { to: '/about-us', text: 'About Us' },
+    { to: '/our-team', text: 'Our Team' },  
     { to: '/get-involved', text: 'Get Involved' },
     { to: '/research', text: 'Research' },
     { to: '/events', text: 'Events' },
-    { to: '/news', text: 'News & Media' },
+    { 
+      text: 'News & Media',
+      dropdown: true,
+      items: [
+        { to: '/news', text: 'News' },
+        { to: '/accomplishments', text: 'Accomplishments' }
+      ]
+    },
     { 
       to: 'https://doneren.auf.nl/bike-kitchen', 
       text: 'Donate', 
@@ -57,7 +65,27 @@ function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-4 items-center">
           {menuItems.map((item) => (
-            item.text === 'Donate' ? (
+            item.dropdown ? (
+              <div key={item.text} className="relative group">
+                <button className="text-lg hover:opacity-80 transition-opacity duration-300 flex items-center">
+                  {item.text}
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  {item.items.map((subItem) => (
+                    <Link
+                      key={subItem.to}
+                      to={subItem.to}
+                      className="block px-4 py-2 text-primary hover:bg-gray-100"
+                    >
+                      {subItem.text}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : item.text === 'Donate' ? (
               <a
                 key={item.to}
                 href={item.to}

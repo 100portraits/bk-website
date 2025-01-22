@@ -2,8 +2,32 @@ import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import 'leaflet/dist/leaflet.css'
+import { FaWrench } from 'react-icons/fa'
+import L from 'leaflet'
+import { renderToStaticMarkup } from 'react-dom/server'
+
 
 function Home() {
+  const iconMarkup = renderToStaticMarkup(
+    <div className="relative">
+      <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-md">
+          <div className="text-primary">
+            <FaWrench size={20} />
+          </div>
+        </div>
+        <div className="bg-white w-4 h-4 rotate-45 absolute left-1/2 -translate-x-1/2 -bottom-1 shadow-md"></div>
+      </div>
+    </div>
+  );
+
+  const customIcon = L.divIcon({
+    html: iconMarkup,
+    className: 'custom-icon',
+    iconSize: [32, 42],
+    iconAnchor: [16, 32],
+  });
+
   return (
     <ParallaxProvider>
       <div>
@@ -92,11 +116,14 @@ function Home() {
                   className="h-full"
                 >
                   <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                   />
-                  <Marker position={[52.362141, 4.911389]}>
-                    <Popup>Find us here!</Popup>
+                  <Marker 
+                    position={[52.362141, 4.911389]}
+                    icon={customIcon}
+                  >
+                    <Popup><h3 className='text-xl'><strong>Bike Kitchen UvA</strong></h3> <br></br>Roetersstraat 37<br></br>1018 WB Amsterdam</Popup>
                   </Marker>
                 </MapContainer>
               </div>
