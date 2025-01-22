@@ -4,6 +4,7 @@ import logo from '../assets/bk-logo.jpg'
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
   const isHomePage = location.pathname === '/'
 
@@ -20,29 +21,126 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isHomePage])
 
-  const navClasses = `shadow-lg fixed top-0 left-0 w-full z-50 py-4 px-10 bg-primary transition-all duration-300  text-white`
+  const navClasses = `shadow-lg fixed top-0 left-0 w-full z-50 py-4 px-4 bg-primary transition-all duration-300 text-white`
+
+  const menuItems = [
+    { to: '/about-us', text: 'About Us' },
+    { to: '/get-involved', text: 'Get Involved' },
+    { to: '/research', text: 'Research' },
+    { to: '/events', text: 'Events' },
+    { to: '/news', text: 'News & Media' },
+    { 
+      to: 'https://doneren.auf.nl/bike-kitchen', 
+      text: 'Donate', 
+      external: true 
+    },
+  ]
 
   return (
     <nav className={navClasses}>
       <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-lg hover:opacity-80 ml-4 flex items-center transition-opacity duration-300">
+        <Link to="/" className="text-lg hover:opacity-80 flex items-center transition-opacity duration-300">
           <img src={logo} alt="Bike Kitchen Logo" className="w-16 h-16 mr-2 -my-2" />
-            Home
-          </Link>
-        <div className="flex space-x-4">
-          <Link to="/about-us" className="text-lg hover:opacity-80 transition-opacity duration-300">
-            About Us
-          </Link>
-          <Link to="/get-involved" className="text-lg hover:opacity-80 transition-opacity duration-300">
-            Get Involved
-          </Link>
-          <Link to="/research" className="text-lg hover:opacity-80 transition-opacity duration-300">
-            Research
-          </Link>
-          <Link to="/news" className="text-lg hover:opacity-80 transition-opacity duration-300">
-            News & Media
-          </Link>
+          <span className="hidden sm:inline">Home</span>
+        </Link>
+
+        {/* Hamburger Menu Button */}
+        <button 
+          className="lg:hidden text-white"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex space-x-4 items-center">
+          {menuItems.map((item) => (
+            item.text === 'Donate' ? (
+              <a
+                key={item.to}
+                href={item.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg px-4 py-2 bg-white text-primary rounded-lg hover:bg-opacity-90 transition-all duration-300 font-semibold"
+              >
+                {item.text}
+              </a>
+            ) : item.external ? (
+              <a
+                key={item.to}
+                href={item.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg hover:opacity-80 transition-opacity duration-300"
+              >
+                {item.text}
+              </a>
+            ) : (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="text-lg hover:opacity-80 transition-opacity duration-300"
+              >
+                {item.text}
+              </Link>
+            )
+          ))}
         </div>
+
+        {/* Mobile Slide-out Menu */}
+        <div className={`fixed top-0 left-0 h-full w-64 bg-primary transform ${
+          isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        } transition-transform duration-300 ease-in-out lg:hidden z-50`}>
+          <div className="pt-20 px-6 space-y-4">
+            <Link to="/" className="block text-2xl hover:opacity-80 mb-8">
+              Home
+            </Link>
+            {menuItems.map((item) => (
+              item.text === 'Donate' ? (
+                <a
+                  key={item.to}
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-lg px-4 py-2 bg-white text-primary rounded-lg hover:bg-opacity-90 transition-all duration-300 font-semibold w-fit"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.text}
+                </a>
+              ) : item.external ? (
+                <a
+                  key={item.to}
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-lg hover:opacity-80"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.text}
+                </a>
+              ) : (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="block text-lg hover:opacity-80"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.text}
+                </Link>
+              )
+            ))}
+          </div>
+        </div>
+
+        {/* Overlay */}
+        {isMobileMenuOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
       </div>
     </nav>
   )

@@ -73,7 +73,7 @@ function Home() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">Find Us</h2>
                 <p className="text-lg mb-4">
-                  Visit us at the Roeterseiland Campus of the University of Amsterdam. We're located in the bike garage underneath the B/C/D building, right by the Roetersstraat entrance.
+                  Visit us at the Roeterseiland Campus of the University of Amsterdam. We're located in the bike garage underneath the A/B/C building, right by the Roetersstraat entrance.
                 </p>
                 <p className="text-lg">
                   Address:<br />

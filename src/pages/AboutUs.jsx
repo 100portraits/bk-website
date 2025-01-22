@@ -39,7 +39,7 @@ function AboutUs() {
                 <li>Hosts</li>
                 <li>Community Members</li>
               </ul>
-              <Link to="/get-involved" className="text-primary hover:underline mt-2 inline-block">
+              <Link to="/get-involved" className="text-primary hover:underline mt-2 inline-block text-xl font-bold">
                 → Join our team as a volunteer
               </Link>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import joinPoster from '../assets/join_poster.jpg'
 
 function GetInvolved() {
   return (
@@ -13,41 +14,78 @@ function GetInvolved() {
               If you'd like to do bike DIY frequently or get more involved with the Bike Kitchen, 
               you can join the Bike Kitchen community for €4 per month.
             </p>
-            <a href="https://doneren.auf.nl/bike-kitchen" target="_blank" className="bg-primary text-secondary px-4 py-2 rounded inline-block">
+
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-3">Membership Benefits</h3>
+              <ul className="list-disc pl-6 mb-4 space-y-2">
+                <li>Access to our DIY repair space during opening times</li>
+                <li>Attend interesting workshops, both related to cycling and other topics</li>
+                <li>Join organised ride-outs in-and around Amsterdam</li>
+                <li>Have monthly drinks and other fun activities together with other cycling enthusiasts</li>
+              </ul>
+              <p className="text-sm italic mb-4">
+                Note: A Bike Kitchen membership for the academic year 2024-2025 has a minimum term of 3 months. 
+                To cancel, email universiteitsfonds@uva.nl
+              </p>
+            </div>
+
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-3">How to Sign Up</h3>
+              <ol className="list-decimal pl-6 mb-4 space-y-2">
+                <li>Click the "Join Community" button below to go to the Amsterdam University Fund (AUF) page</li>
+                <li>Select: "I donate.."</li>
+                <li>Choose: "Monthly"</li>
+                <li>Select: "Enter a donation amount"</li>
+                <li>Enter the donation amount of: €4,-</li>
+              </ol>
+              <p className="mb-4">You will receive a confirmation email from AUF about your membership.</p>
+            </div>
+
+            <a href="https://doneren.auf.nl/bike-kitchen" target="_blank" className="bg-primary text-secondary px-4 py-2 rounded inline-block mb-4">
               Join Community
             </a>
           </section>
+        </div>
+        
+        <div className="md:w-2/5 h-min">
+          <div className="w-full h-[400px] bg-gray-200 rounded-lg sticky top-24 flex items-center justify-center">
+            <p className="text-gray-500">Community onepager here</p>
+          </div>
+        </div>
+      </div>
 
+      <div className="flex flex-col md:flex-row gap-8 mt-10">
+        <div className="md:w-2/5 h-min">
+          <img 
+            src={joinPoster}
+            alt="Bike Kitchen Workshop"
+            className="w-full h-full object-cover rounded-lg sticky top-24"
+          />
+        </div>
+        
+        <div className="md:w-3/5">
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Become a Team Member</h2>
             <p className="mb-4">
-              Join us as a host or mechanic and help us grow! Let us know why you'd like to be involved 
+              Join us as a host or mechanic and help us increase our impact! Let us know why you'd like to be involved 
               and how we may approach you.
             </p>
             <a href="mailto:bikekitchenuva@gmail.com" className="bg-primary text-secondary px-4 py-2 rounded inline-block">
               Send us an email
             </a>
           </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Donate to the Bike Kitchen</h2>
-            <p className="mb-4">
-              Your donations help us keep the workshop running and improve our facilities.
-            </p>
-            <a href="https://doneren.auf.nl/bike-kitchen" target="_blank" className="bg-primary text-secondary px-4 py-2 rounded inline-block">
-              Donate
-            </a>
-          </section>
-        </div>
-        
-        <div className="md:w-2/5">
-          <img 
-            src="https://bikecity.amsterdam.nl/wp-content/uploads/2024/05/d90ab7a8-a338-4138-9945-4b2fdb99b856.jpeg"
-            alt="Bike Kitchen Workshop"
-            className="w-full h-full object-cover rounded-lg sticky top-24"
-          />
         </div>
       </div>
+
+      <section className="mb-8 mt-10">
+        <h2 className="text-2xl font-semibold mb-4">Donate to the Bike Kitchen</h2>
+        <p className="mb-4">
+          Your donations help us keep the workshop running and improve our facilities.
+        </p>
+        <a href="https://doneren.auf.nl/bike-kitchen" target="_blank" className="bg-primary text-secondary px-4 py-2 rounded inline-block">
+          Donate
+        </a>
+      </section>
     </div>
   )
 }

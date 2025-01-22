@@ -8,6 +8,7 @@ import Research from './pages/Research'
 import GetInvolved from './pages/GetInvolved'
 import News from './pages/News'
 import NewsDetail from './pages/NewsDetail'
+import Events from './pages/Events'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Route path="/get-involved" element={<GetInvolved />} />
               <Route path="/news" element={<News />} />
               <Route path="/news/:slug" element={<NewsDetail />} />
+              <Route path="/events" element={<Events />} />
             </Routes>
           </main>
           <Footer />
