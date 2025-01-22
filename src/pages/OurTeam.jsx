@@ -21,7 +21,7 @@ function OurTeam() {
       
       <div className="mb-8">
         <p className="text-lg mb-6">
-          Meet the passionate individuals behind the Bike Kitchen UvA who make our mission possible.
+          Meet the team.
         </p>
       </div>
 
