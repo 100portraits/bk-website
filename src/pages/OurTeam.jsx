@@ -8,8 +8,8 @@ function OurTeam() {
       image: 'https://placehold.co/400x400', // Replace with actual image
       bio: 'Former student who turned her passion for mobility and bike building into reality by founding the Bike Kitchen.',
       contact: {
-        email: 'romee@bikekitchen.nl',
-        linkedin: 'https://linkedin.com/in/romee-nicolai'
+        email: '..',
+        linkedin: '..'
       }
     },
     // Add more team members here
