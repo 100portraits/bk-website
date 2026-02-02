@@ -91,11 +91,6 @@ function AboutUs() {
             </div>
           </section>
 
-          <section className="mb-8">
-            <Link to="/news" className="text-primary hover:underline mt-2 inline-block">
-              → Check out our latest news and other media
-            </Link>
-          </section>
         </div>
         
         <div className="md:w-2/5">

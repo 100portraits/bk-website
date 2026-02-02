@@ -7,8 +7,9 @@ function GetInvolved() {
     <div className="container mx-auto p-6 mt-24 max-w-screen-xl">
       <h1 className="text-4xl font-bold mb-6">Get Involved</h1>
       
-      <div className="flex flex-col-reverse md:flex-row gap-8">
-        <div className="md:w-3/5">
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col md:flex-row gap-8">
+        <div className="">
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Join Our Community</h2>
             <p className="mb-4">
@@ -24,10 +25,7 @@ function GetInvolved() {
                 <li>Join organised ride-outs in-and around Amsterdam</li>
                 <li>Have monthly drinks and other fun activities together with other cycling enthusiasts</li>
               </ul>
-              <p className="text-sm italic mb-4">
-                Note: A Bike Kitchen membership for the academic year 2024-2025 has a minimum term of 3 months. 
-                To cancel, email universiteitsfonds@uva.nl
-              </p>
+
             </div>
 
             <div className="mb-6">
@@ -47,26 +45,12 @@ function GetInvolved() {
             </a>
           </section>
         </div>
-        
-        <div className="md:w-2/5 h-min">
-          <img 
-            src={joinCommunity}
-            alt="Join our community"
-            className="w-full h-full object-cover rounded-lg sticky top-24"
-          />
-        </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8 mt-10">
-        <div className="md:w-2/5 h-min">
-          <img 
-            src={joinPoster}
-            alt="Bike Kitchen Workshop"
-            className="w-full h-full object-cover rounded-lg sticky top-24"
-          />
-        </div>
+      <div className="flex flex-col md:flex-row gap-8">
+
         
-        <div className="md:w-3/5">
+        <div className="">
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Become a Team Member</h2>
             <p className="mb-4">
@@ -78,6 +62,7 @@ function GetInvolved() {
             </a>
           </section>
         </div>
+      </div>
       </div>
 
       <section className="mb-8 mt-10">

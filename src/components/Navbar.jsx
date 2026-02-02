@@ -25,18 +25,8 @@ function Navbar() {
 
   const menuItems = [
     { to: '/about-us', text: 'About Us' },
-    { to: '/our-team', text: 'Our Team' },  
     { to: '/get-involved', text: 'Get Involved' },
     { to: '/research', text: 'Research' },
-    { to: '/events', text: 'Events' },
-    { 
-      text: 'News & Media',
-      dropdown: true,
-      items: [
-        { to: '/news', text: 'News' },
-        { to: '/accomplishments', text: 'Accomplishments' }
-      ]
-    },
     { 
       to: 'https://doneren.auf.nl/bike-kitchen', 
       text: 'Donate', 

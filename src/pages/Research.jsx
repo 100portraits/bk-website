@@ -105,7 +105,7 @@ function Research() {
           </div>
         </details>
 
-        <details className="bg-gray-50 p-6 rounded-lg">
+        {/* <details className="bg-gray-50 p-6 rounded-lg">
           <summary className="text-2xl font-semibold cursor-pointer hover:text-primary">
             Current Research Projects
           </summary>
@@ -120,7 +120,7 @@ function Research() {
               <p className="mb-4">[Research description to be added]</p>
             </div>
           </div>
-        </details>
+        </details> */}
 
         
       </div>
