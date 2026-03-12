@@ -37,7 +37,7 @@ function Home() {
             className="absolute inset-0 h-[120%] -top-[40%]"
           >
             <img 
-              src="https://bikecity.amsterdam.nl/wp-content/uploads/2024/05/d90ab7a8-a338-4138-9945-4b2fdb99b856.jpeg" 
+              src="/Bike-kitchen-space.jpeg" 
               alt="Bike Kitchen Workshop"
               className="w-full h-full object-cover"
             />
